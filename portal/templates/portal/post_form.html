@@ -1,0 +1,14 @@
+{% extends 'portal/base.html' %}
+
+{% block content %}
+  <h1>New Post</h1>
+  <form novalidate enctype="multipart/form-data" class="post-form" method="POST">
+    {% csrf_token %}
+    <p></p>
+    <p></p>
+    {{ form.as_p }}
+    <button type="submit" class='btn btn-primary' name="button">Save</button>
+  </form>
+
+  <script>var editor = new MediumEditor('.editable');</script>
+{% endblock %}
